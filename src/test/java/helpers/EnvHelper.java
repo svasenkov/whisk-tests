@@ -31,7 +31,7 @@ public class EnvHelper {
 
     public static void loadEnvironment() {
         url = "https://" + System.getProperty("url", DEFAULT_URL);
-        selenoid_url = "https://" + System.getProperty("url", DEFAULT_URL);
+        selenoid_url = "http://" + System.getProperty("selenoid_url");
         language = System.getProperty("language", DEFAULT_LANGUAGE);
         browser = System.getProperty("browser", DEFAULT_BROWSER);
         isHeadless = parseBoolean(System.getProperty("headless", DEFAULT_HEADLESS));
