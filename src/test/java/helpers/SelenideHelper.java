@@ -24,7 +24,6 @@ import static org.openqa.selenium.logging.LogType.BROWSER;
 public class SelenideHelper {
     static Logger logger = LoggerFactory.getLogger(SelenideHelper.class);
 
-    public static final String SELENOID_URL = "http://0.0.0.0:4444/";
     public static final String SCREEN_RESOLUTION = "1360x768";
 
     public static void configureSelenide() {
@@ -49,7 +48,7 @@ public class SelenideHelper {
         Configuration.timeout = 5000;
         Configuration.browserCapabilities = capabilities;
         if (isSelenoid) {
-            Configuration.remote = SELENOID_URL + "wd/hub/";
+            Configuration.remote = selenoid_url + "/wd/hub/";
         }
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(false).savePageSource(false));

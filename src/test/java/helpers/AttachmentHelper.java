@@ -60,7 +60,7 @@ public class AttachmentHelper {
     public static String attachVideo(String sessionId) {
         URL url = null;
         try {
-            url = new URL(selenoid_video_url + "/video/" + sessionId + ".mp4");
+            url = new URL(selenoid_url + "/video/" + sessionId + ".mp4");
 
         } catch (Exception e) {
             e.printStackTrace();

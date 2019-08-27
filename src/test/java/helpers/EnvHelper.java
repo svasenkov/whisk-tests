@@ -19,11 +19,9 @@ public class EnvHelper {
 
     public static String
             url,
-            login,
-            password,
             language,
             browser,
-            selenoid_video_url;
+            selenoid_url;
 
     public static boolean
             isHeadless,
@@ -33,14 +31,13 @@ public class EnvHelper {
 
     public static void loadEnvironment() {
         url = "https://" + System.getProperty("url", DEFAULT_URL);
-        login = System.getProperty("login");
-        password = System.getProperty("password");
+        selenoid_url = "https://" + System.getProperty("url", DEFAULT_URL);
         language = System.getProperty("language", DEFAULT_LANGUAGE);
         browser = System.getProperty("browser", DEFAULT_BROWSER);
         isHeadless = parseBoolean(System.getProperty("headless", DEFAULT_HEADLESS));
         isSelenoid = parseBoolean(System.getProperty("selenoid", DEFAULT_SELENOID));
         isVideoOn = parseBoolean(System.getProperty("video", DEFAULT_VIDEO));
-        selenoid_video_url = "http://" + System.getProperty("selenoid_video_url");
+        selenoid_url = "http://" + System.getProperty("selenoid_video_url") + ":4444";
     }
 
     public static String getEnvPropertiesForAllure() {
