@@ -56,6 +56,7 @@ public class SelenideHelper {
         logger.info(
             "headless: " + Configuration.headless + "\n" +
             "selenoid: " + isSelenoid + "\n" +
+            "selenoid_url: " + selenoid_url + "\n" +
             "video: " + isVideoOn);
 
     }
