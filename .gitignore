@@ -21,7 +21,7 @@
 *.iml
 
 # Project gen files
-.idea
+.idea/
 .gradle/
 build/
 bin/
