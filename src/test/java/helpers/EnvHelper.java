@@ -31,13 +31,12 @@ public class EnvHelper {
 
     public static void loadEnvironment() {
         url = "https://" + System.getProperty("url", DEFAULT_URL);
-        selenoid_url = "http://" + System.getProperty("selenoid_url");
+        selenoid_url = "http://" + System.getProperty("selenoid_url") + ":4444";
         language = System.getProperty("language", DEFAULT_LANGUAGE);
         browser = System.getProperty("browser", DEFAULT_BROWSER);
         isHeadless = parseBoolean(System.getProperty("headless", DEFAULT_HEADLESS));
         isSelenoid = parseBoolean(System.getProperty("selenoid", DEFAULT_SELENOID));
         isVideoOn = parseBoolean(System.getProperty("video", DEFAULT_VIDEO));
-        selenoid_url = "http://" + System.getProperty("selenoid_video_url") + ":4444";
     }
 
     public static String getEnvPropertiesForAllure() {
