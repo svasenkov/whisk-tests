@@ -1,12 +1,9 @@
 package helpers;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.logging.LogType;
@@ -19,7 +16,7 @@ import org.slf4j.LoggerFactory;
 import java.util.logging.Level;
 
 import static com.codeborne.selenide.Selectors.by;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 import static helpers.EnvHelper.*;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
@@ -54,8 +51,6 @@ public class SelenideHelper {
         if (isSelenoid) {
             Configuration.remote = SELENOID_URL + "wd/hub/";
         }
-        WebDriverManager.chromedriver().version("75.0.3770.8").setup();
-
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(false).savePageSource(false));
 
