@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="E2E tests">
+    <test name="Authorization tests (GUI)">
+        <classes>
+            <class name="tests.AuthorizationTests"></class>
+        </classes>
+    </test>
+    <test name="Privacy policy tests (GUI)">
+        <classes>
+            <class name="tests.PrivacyPolicyTests"></class>
+        </classes>
+    </test>
+    <test name="Terms of Service tests (GUI)">
+        <classes>
+            <class name="tests.TermsTests"></class>
+        </classes>
+    </test>
+</suite>
+
