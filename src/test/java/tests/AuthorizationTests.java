@@ -3,17 +3,11 @@ package tests;
 import helpers.TestBase;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import pages.BasePage;
 import pages.ShoppingListPage;
-import pages.blocks.TopbarBlock;
-import pages.external.GoogleAuthPage;
 import pages.modal.AuthorizationModal;
 
-import static com.codeborne.selenide.Selenide.switchTo;
-import static pages.BasePage.openUrl;
 import static pages.BasePage.openUrlWithSkip;
 import static utils.RandomUtils.getRandomEmail;
-import static utils.RandomUtils.getRandomString;
 
 @Story("Authorization tests (GUI)")
 public class AuthorizationTests extends TestBase {

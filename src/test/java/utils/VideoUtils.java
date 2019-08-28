@@ -10,7 +10,7 @@ import java.util.HashSet;
 
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static helpers.EnvHelper.selenoid_url;
+import static helpers.EnvHelper.selenoidUrl;
 
 public class VideoUtils {
 
@@ -31,7 +31,7 @@ public class VideoUtils {
         videos.forEach(video -> {
            while (true) {
                Response response = RestAssured
-                       .delete(selenoid_url + "/video/" + video + ".mp4")
+                       .delete(selenoidUrl + "/video/" + video + ".mp4")
                        .then()
                        .extract()
                        .response();
