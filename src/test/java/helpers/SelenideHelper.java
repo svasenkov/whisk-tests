@@ -48,7 +48,7 @@ public class SelenideHelper {
         Configuration.timeout = 5000;
         Configuration.browserCapabilities = capabilities;
         if (isSelenoid) {
-            Configuration.remote = selenoid_url + "/wd/hub/";
+            Configuration.remote = selenoidUrl + "/wd/hub/";
         }
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(false).savePageSource(false));
@@ -56,17 +56,12 @@ public class SelenideHelper {
         logger.info(
             "headless: " + Configuration.headless + "\n" +
             "selenoid: " + isSelenoid + "\n" +
-            "selenoid_url: " + selenoid_url + "\n" +
+            "selenoidUrl: " + selenoidUrl + "\n" +
             "video: " + isVideoOn);
-
     }
 
     public static String getConsoleLogs() {
-//        sleep(2000);
-//        $("html").should(Condition.exist);
-        String logs = String.join("\n", Selenide.getWebDriverLogs(BROWSER));
-
-        return logs;
+        return String.join("\n", Selenide.getWebDriverLogs(BROWSER));
     }
 
     public static SelenideElement $d(String role) {

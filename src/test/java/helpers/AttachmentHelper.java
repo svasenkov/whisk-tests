@@ -15,8 +15,7 @@ import static utils.FilesUtils.readBytesFromFile;
 import static utils.FilesUtils.saveFile;
 
 public class AttachmentHelper {
-
-    static Logger logger = LoggerFactory.getLogger(AttachmentHelper.class);
+    private static final String ALLURE_ENV_PROPERTIES_LOCATION = "build/allure-results/environment.properties";
 
     public static void attachBrowserConsoleLogs() {
         attachAsText("Browser console logs", getConsoleLogs());
@@ -60,7 +59,7 @@ public class AttachmentHelper {
     public static String attachVideo(String sessionId) {
         URL url = null;
         try {
-            url = new URL(selenoid_url + "/video/" + sessionId + ".mp4");
+            url = new URL(selenoidUrl + "/video/" + sessionId + ".mp4");
 
         } catch (Exception e) {
             e.printStackTrace();
