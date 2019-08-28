@@ -17,13 +17,13 @@ import static helpers.SelenideHelper.$d;
 import static pages.BasePage.openUrlWithSkip;
 import static utils.RandomUtils.getRandomEmail;
 
-@Story("Authorization tests (GUI)")
+@Story("Share cookie receipt url (GUI)")
 public class CookieReceiptTests extends TestBase {
 
     String sharedUrl;
 
-    @Test( description = "Successful registration with new email")
-    public void test00_saveSharedUrl() {
+    @Test( description = "Create receipt and save shared url")
+    public void test00_createReceipt() {
         String randomEmail = getRandomEmail();
 
         openUrlWithSkip("/");
@@ -53,7 +53,7 @@ public class CookieReceiptTests extends TestBase {
 
     }
 
-    @Test( description = "Successful registration with new email")
+    @Test( description = "Open shared url and check receipt")
     public void test01_verifySharedUrlHasReceipt() {
         String randomEmail = getRandomEmail();
 

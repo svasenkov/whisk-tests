@@ -16,5 +16,10 @@
             <class name="tests.TermsTests"></class>
         </classes>
     </test>
+    <test name="Share cookie receipt url (GUI)">
+        <classes>
+            <class name="tests.CookieReceiptTests"></class>
+        </classes>
+    </test>
 </suite>
 
