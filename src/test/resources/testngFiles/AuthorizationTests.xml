@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="E2E tests">
+    <test name="Authorization tests (GUI)">
+        <classes>
+            <class name="tests.AuthorizationTests"></class>
+        </classes>
+    </test>
+</suite>
+

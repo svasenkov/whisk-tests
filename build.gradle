@@ -98,3 +98,17 @@ task AllTests(type: Test) {
         }
     }
 }
+task AuthorizationTests(type: Test) {
+    useTestNG() {
+        options {
+//            if(project.hasProperty("parallelType")) {
+//                String pType = parallelType.toString()
+//                setParallel(pType)
+//            }
+//            if (project.hasProperty("parallelThreads")) {
+//                setThreadCount(parallelThreads.toInteger())
+//            }
+            suites 'src/test/resources/testngFiles/AuthorizationTests.xml'
+        }
+    }
+}
