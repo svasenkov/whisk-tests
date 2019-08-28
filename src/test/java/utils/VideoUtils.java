@@ -11,6 +11,7 @@ import java.util.HashSet;
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static helpers.EnvHelper.selenoidUrl;
+import static helpers.SelenideHelper.getSessionId;
 
 public class VideoUtils {
 
@@ -23,7 +24,7 @@ public class VideoUtils {
     }
 
     public static String getVideoFilename(){
-        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid","");
+        return getSessionId().replace("selenoid","");
     }
 
     public static void removeAllVideos(){
