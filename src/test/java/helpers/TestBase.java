@@ -12,8 +12,8 @@ public class TestBase {
     public String DEFAULT_EMAIL = "",
                   DEFAULT_PASSWORD = "",
 
-                  DEFAULT_GOOGLE_EMAIL = "whiskautotest@gmail.com",
-                  DEFAULT_GOOGLE_PASSWORD = "asd55441",
+                  DEFAULT_GOOGLE_EMAIL = "testwhisk7@gmail.com",
+                  DEFAULT_GOOGLE_PASSWORD = "testwhisk%7#1",
 
                   DEFAULT_FACEBOOK_EMAIL = "whiskautotest@gmail.com",
                   DEFAULT_FACEBOOK_PASSWORD = "asd55441";
