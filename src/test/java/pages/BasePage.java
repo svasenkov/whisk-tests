@@ -23,9 +23,7 @@ public class BasePage {
     @Step("Open url \"{url}\" with skip Tour modal")
     public static void openUrlWithSkip(String url) {
         open(url);
-        if ($d("onboarding-skip").exists()) {
-            $d("onboarding-skip").click();
-        }
+        $d("onboarding-skip").shouldBe(visible).click();
     }
 
     @Step("Verify user is logged in as \"{text}\"")

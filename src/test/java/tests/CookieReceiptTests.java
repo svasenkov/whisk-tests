@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static helpers.AttachmentHelper.attachAsText;
 import static helpers.SelenideHelper.$d;
 import static pages.BasePage.openUrlWithSkip;
 import static utils.RandomUtils.getRandomEmail;
@@ -50,7 +51,7 @@ public class CookieReceiptTests extends TestBase {
                 .$(byText("Copy link")).shouldBe(visible).click();
 
         sharedUrl = new ClipboardUtils().getContent();
-
+        attachAsText("Text from clipboard", sharedUrl);
     }
 
     @Test( description = "Open shared url and check receipt")

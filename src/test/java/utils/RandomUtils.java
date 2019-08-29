@@ -11,7 +11,7 @@ public class RandomUtils {
 
     private static Logger logger = LoggerFactory.getLogger(RandomUtils.class);
 
-    private static String emailDomain = "@jbtd.no";
+    private static String emailDomain = "@whsk.no";
 
     public static String getRandomString(int length) {
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
