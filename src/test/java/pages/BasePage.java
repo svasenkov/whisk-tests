@@ -31,7 +31,7 @@ public class BasePage {
 
     @Step("Verify user is logged in as \"{text}\"")
     public BasePage verifyIsLoggedInAs(String text) {
-        avatarButton.waitUntil(visible, 10000)
+        avatarButton.waitUntil(visible, 20000)
                 .shouldBe(visible).shouldHave(text(text));
 
         return this;
