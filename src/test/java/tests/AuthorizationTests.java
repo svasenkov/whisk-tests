@@ -27,23 +27,23 @@ public class AuthorizationTests extends TestBase {
         new ShoppingListPage().verifyIsLoggedInAs(randomEmail);
     }
 
-    @Test( description = "Successful authorization with google account")
-    public void test01_authorizationWithGoogle() {
-        openUrlWithSkip("/");
-        new AuthorizationModal()
-                .clickLink("Continue with Google");
-        switchTo().window(1);
-
-        new GoogleAuthPage()
-                .typeEmail(DEFAULT_GOOGLE_EMAIL)
-                .clickNext()
-                .typePassword(DEFAULT_GOOGLE_PASSWORD)
-                .clickNext();
-
-        switchTo().window(0);
-
-        new ShoppingListPage().verifyIsLoggedInAs(DEFAULT_GOOGLE_EMAIL);
-    }
+//    @Test( description = "Successful authorization with google account")
+//    public void test01_authorizationWithGoogle() {
+//        openUrlWithSkip("/");
+//        new AuthorizationModal()
+//                .clickLink("Continue with Google");
+//        switchTo().window(1);
+//
+//        new GoogleAuthPage()
+//                .typeEmail(DEFAULT_GOOGLE_EMAIL)
+//                .clickNext()
+//                .typePassword(DEFAULT_GOOGLE_PASSWORD)
+//                .clickNext();
+//
+//        switchTo().window(0);
+//
+//        new ShoppingListPage().verifyIsLoggedInAs(DEFAULT_GOOGLE_EMAIL);
+//    }
 
     @Test( description = "Successful login with facebook account")
     public void test02_loginWithFacebook() {
