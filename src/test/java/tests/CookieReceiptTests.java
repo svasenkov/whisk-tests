@@ -42,7 +42,7 @@ public class CookieReceiptTests extends TestBase {
         $$("#share-button").filter(visible).get(0).click();
 
         $d("onboarding-skip").shouldBe(visible).click();
-
+        
         $$("#share-button").filter(visible).get(0).click();
 
         $(".popup-enter-done").shouldBe(visible)

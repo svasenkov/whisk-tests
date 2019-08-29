@@ -34,6 +34,8 @@ public class SelenideHelper {
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("disable-infobars");
+        chromeOptions.addArguments("--disable-notifications");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName(EnvHelper.browser);

@@ -15,8 +15,8 @@ public class TestBase {
                   DEFAULT_GOOGLE_EMAIL = "whiskautotest@gmail.com",
                   DEFAULT_GOOGLE_PASSWORD = "asd55441",
 
-                  DEFAULT_FACEBOOK_EMAIL = "",
-                  DEFAULT_FACEBOOK_PASSWORD = "";
+                  DEFAULT_FACEBOOK_EMAIL = "whiskautotest@gmail.com",
+                  DEFAULT_FACEBOOK_PASSWORD = "asd55441";
 
     @BeforeSuite
     @Step("Setup test environment for UI tests")
