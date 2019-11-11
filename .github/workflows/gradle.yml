@@ -14,4 +14,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./gradlew clean AllTests -Durl=dev.whisk.com
+      run: gradle clean AllTests -Durl=dev.whisk.com
